@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="#A92028"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Type"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:id="@+id/type"
+        android:textColor="#fff" />
+
+    <Button
+        android:text="Past"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/type"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="64dp"
+        android:onClick="btn_past_click"
+        android:id="@+id/btn_past" />
+
+    <Button
+        android:text="Upcomming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_future"
+        android:onClick="btn_future_click"
+        android:layout_alignBaseline="@+id/btn_past"
+        android:layout_alignBottom="@+id/btn_past"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="38dp" />
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.thegovinda.timetomedicate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.SET_TIME"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ttm_logo_main"
+        android:label="@string/time_to_medicate"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Validate">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/time_to_medicate"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PatientList"
+            android:label="@string/patient_name"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DoctorList"
+            android:label="@string/doctor_name"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Appointment"
+            android:label="Appointments"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Medication"
+            android:label="Medications"
+            android:parentActivityName=".MainActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <activity
+            android:name=".Patient"
+            android:label="Patient"
+            android:parentActivityName=".PatientList" />
+        <activity
+            android:name=".SingleMedication"
+            android:label="Medication"
+            android:parentActivityName=".PatientList" />
+        <activity
+            android:name=".Doctor"
+            android:label="Doctor"
+            android:parentActivityName=".DoctorList" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Pop"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".Repeating_Activity"></activity>
+        <receiver android:name=".Notification_receiver"></receiver>
+    </application>
+
+</manifest>
